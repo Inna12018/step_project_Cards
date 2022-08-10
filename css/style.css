@@ -1,0 +1,140 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url(../img/background/backgropund1.png);
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+.conteiner {
+    margin: 0 auto;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    background: rgba(23, 44, 39, 0.2);
+    height: 75px;
+    margin: -8px;
+}
+
+.img-hover {
+    transition: 0.25s ease-in-out;
+}
+
+.img-hover:hover {
+    fill: #3010F1;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #3e7f81;
+    padding: 10px 50px ;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: white;
+    transition: 0.25s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: #3010F1;
+}
+
+.conteiner {
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    margin-top: 15px;
+    padding: 0 240px ;
+}
+
+.text-input {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+#performance {
+    width: 200px;
+    height: 35px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.btn-search {
+    background: #3e7f81;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+.btn-search:hover {
+    background: #3010F1;
+}
+
+.section {
+    width: 850px;
+    height: 420px;
+    margin-top: 20px;
+    background: rgba(23, 44, 39, 0.2);
+    border: 1px solid rgba(23, 44, 39, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 63px;
+    color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding-top: 100px;
+}
+
+.footer-text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+footer {
+    text-align: center;
+}
+
+.footer-link {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-decoration: none;
+    color: #3e7f81;
+    transition: 0.25s ease-in-out;
+}
+
+.footer-link:hover {
+    color: #3010F1;
+}
