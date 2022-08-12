@@ -9,6 +9,6 @@ const sendRequest = async (url, method = 'GET', config = null) => {
     } else {
       return result;
     } 
-  }
+  };
   
 export default sendRequest;
