@@ -1,14 +1,19 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     background: url(../img/background/backgropund1.png);
     background-repeat: no-repeat;
     background-size: cover;    
+    overflow-x:hidden;
 }
 
 .conteiner {
     margin: 0 auto;
+   
 }
-
+/* 
+.visual-hidden {
+    display: none;
+} */
 
 .wrapper {
     display: flex;
@@ -46,16 +51,12 @@ body {
     background: #3010F1;
 }
 
-.conteiner {
-    margin: 0 auto;
-}
-
 form {
     display: flex;
     justify-content: space-around;
     text-align: center;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 25px;
     padding: 0 240px ;
 }
 
@@ -69,7 +70,7 @@ form {
     line-height: 19px;
 }
 
-#performance {
+#performance, .performance {
     width: 200px;
     height: 35px;
     border: 1px solid #000000;
@@ -124,6 +125,7 @@ form {
 
 footer {
     text-align: center;
+    padding-top: 25px;
 }
 
 .footer-link {

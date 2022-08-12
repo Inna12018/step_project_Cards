@@ -15,7 +15,7 @@
 * AJAX-запросы (get-request. delete-request);
 
 
-**Student-3** Андрей Мирошниченко hf,jnfk c:
+**Student-3** Андрей Мирошниченко работал с:
 * Cборка проекта;
 * AJAX-запросы (post-request, get-request. put-request, delete-request);
 * Фильтр визитов;
