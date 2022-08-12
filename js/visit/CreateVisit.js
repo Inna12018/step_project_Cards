@@ -4,7 +4,7 @@ import Modal from '../modal/modal.js';
 class CreateCardModal extends Modal {
   constructor(token, modal) {
     super(modal),
-      this.token = token
+      this.token = token;
   }
   showModalCreateCard() {
     this.showModal();
@@ -86,7 +86,7 @@ class CreateCardModal extends Modal {
       }
       // this.postCard(body);
      this.postCard(body);
-    })
+    });
 
     function closeEvent(event) {
       if (event.target.classList.contains('modal-close') || !event.target.classList.contains('header-button') && !event.target.closest(".modal-create-card")) {
@@ -107,7 +107,7 @@ class CreateCardModal extends Modal {
       .then(response => response.text())
       .then(data => {
         console.log(data);
-        this.hideModal()
+        this.hideModal();
       })
       .catch(error => console.error(error.message));
   }

@@ -4,7 +4,7 @@ import Modal from './modal/modal.js';
 class AutoModal extends Modal{
     constructor(modal) {
       super(modal),
-      this.token = null
+      this.token = null;
     }
     showAutoModal() {
       this.showModal();
@@ -15,7 +15,8 @@ class AutoModal extends Modal{
       const emailValue = document.querySelector('.input-email').value;
       const passwordValue = document.querySelector('.input-password').value;
       this.sendAuntificationData(emailValue, passwordValue);
-    })
+    });
+
       function closeEvent(event) {
         if (event.target.classList.contains('modal-close') || !event.target.classList.contains('btn-header') && !event.target.closest(".auth-modal")) {
           document.removeEventListener('click', closeEvent);
