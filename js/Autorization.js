@@ -2,29 +2,6 @@ import sendRequest from './request/sendRequest.js';
 import {validateEmail,validatePassword} from './modal/validate.js'
 import Modal from './modal/modal.js';
 
-<<<<<<< Updated upstream
-class AutoModal extends Modal{
-    constructor(modal) {
-      super(modal),
-      this.token = null;
-    }
-    showAutoModal() {
-      this.showModal();
-      const btnSendRequest = document.querySelector('.btn-entry');
-      btnSendRequest.addEventListener('click', () => {
-        this.changeNavButton();
-        //need Validation!!!!
-      const emailValue = document.querySelector('.input-email').value;
-      const passwordValue = document.querySelector('.input-password').value;
-      this.sendAuntificationData(emailValue, passwordValue);
-    });
-
-      function closeEvent(event) {
-        if (event.target.classList.contains('modal-close') || !event.target.classList.contains('btn-header') && !event.target.closest(".auth-modal")) {
-          document.removeEventListener('click', closeEvent);
-          document.querySelector('.auth-modal').classList.add("modal");
-        }
-=======
 class AutorizationModal extends Modal{
   constructor(modal) {
     super(modal),
@@ -45,7 +22,6 @@ class AutorizationModal extends Modal{
       if (event.target.classList.contains('modal-close') || !event.target.classList.contains('header-button') && !event.target.closest(".modal-authorization")) {
         document.removeEventListener('click', closeEvent);
         document.querySelector('.modal-authorization').classList.add("modal");
->>>>>>> Stashed changes
       }
     }
     document.addEventListener('click', closeEvent);
