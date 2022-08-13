@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import AutoModal from './Autorization.js';
 import sendRequest from "./request/sendRequest.js";
 import CreateCardModal from './visit/CreateVisit.js';
@@ -6,28 +7,24 @@ import CreateCardModal from './visit/CreateVisit.js';
 const btnAuth = document.querySelector('.btn-auth');
 const btnCreate = document.querySelector('.btn-create');
 const token = 'ecc480aa-5b7b-4842-ba64-8a77d77293af';
+=======
+import AutorizationModal from "./Autorization.js";
+const btnAunt = document.querySelector(".btn-auntification");
+const btnCreateCard = document.querySelector(".btn__create-card");
+>>>>>>> Stashed changes
 
-const modalAuto = new AutoModal('.auth-modal');
+const modalAvtorization = new AutorizationModal(".modal-authorization");
 
-btnAuth.addEventListener('click',()=>{
-    modalAuto.showAutoModal();
+btnAunt.addEventListener("click", () => {
+  modalAvtorization.showModalAvtorization();
 });
 
-btnCreate.addEventListener('click',()=>{
-    const modalCreateCard = new CreateCardModal(modalAuto.getToken(),'.modal-create-card');
-    modalCreateCard.showModalCreateCard();
+//потрібно для створення картки
+
+btnCreateCard.addEventListener("click", () => {
+  const modalCreateCard = new CreateCardModal(
+    modalAutorization.getToken(),
+    ".modal-create-card "
+  );
+  modalCreateCard.showModalCreateCard();
 });
-
-// Функція для отримання карток з серверу(для тестування)
-
-const showAllCards = sendRequest("https://ajax.test-danit.com/api/v2/cards", 'GET', {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      },
-    })
-      .then(data => {
-        console.log(data);
-      })
-      .catch(error => console.error(error.message));
-
