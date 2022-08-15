@@ -12,3 +12,5 @@ const sendRequest = async (url, method = 'GET', config = null) => {
   };
   
 export default sendRequest;
+
+
