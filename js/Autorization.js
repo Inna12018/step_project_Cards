@@ -7,7 +7,7 @@ class AutorizationModal extends Modal{
     super(modal),
     this.token = null //тут залишиться без коми та нормально майже працює 
   }
-  showModalAvtorization() {
+  showModalAuto() {
     this.showModal();
     const btnSendRequest = document.querySelector('.btn-entry');
     btnSendRequest.addEventListener('click', (e) => {

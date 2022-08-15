@@ -10,10 +10,6 @@ body {
     margin: 0 auto;
    
 }
-/* 
-.visual-hidden {
-    display: none;
-} */
 
 .wrapper {
     display: flex;
@@ -139,4 +135,58 @@ footer {
 
 .footer-link:hover {
     color: #3010F1;
+}
+
+/* Модальне вікно авторизації */
+
+.modal-authorization {
+    z-index: 2; 
+    width: 500px; 
+    top: 200px;
+    background: rgba(23, 44, 39, 0.8);
+    border-radius: 25px;
+}
+
+.input-group, .modal-header {
+    width: 450px;
+}
+
+.input-group {
+    padding-top: 20px;
+}
+
+.input-group-text{
+    background-color: #3e7f81;
+    color: white;
+    font-weight: 500;
+}
+
+.btn-entry {
+    margin: 20px 0 20px 0;
+}
+
+.modal-title {
+    padding-right: 175px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Модальне вікно створення візиту */
+
+.modal-create-card {
+    width: 500px; 
+    top: 200px;
+    background: rgba(23, 44, 39, 0.8);
+    margin-top: 300px;
+    border-radius: 25px;
+}
+
+.form-floating {
+    height: 100px;
+    margin-top: 20px;
+}
+
+.form-floating label {
+    font-size: 18px;
+    line-height: 20px;
 }
