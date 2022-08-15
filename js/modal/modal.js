@@ -14,6 +14,7 @@
   import {Form, Select, Textarea, Input} from "../form/Form.js";
 
 class Modal {
+<<<<<<< HEAD
     constructor() {
         this.elements = {
             wrap: document.createElement('div'),
@@ -105,6 +106,17 @@ class Modal {
         let t = new Textarea();
         t.addTextarea(form, classes, placeholder, id, descValue);
     }
+=======
+  constructor(modalClass) {
+    this.modal = document.querySelector(modalClass); //тут залишиться без коми та нормально майже працює 
+  }
+  showModal(){
+    this.modal.classList.remove('modal');
+  }
+  hideModal() {
+    this.modal.classList.add('modal');
+  }
+>>>>>>> 086cf7fd4e51091ba20da5579b7134e229a14e88
 }
 
 export default Modal;

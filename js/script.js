@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 // import AutoModal from './Autorization.js';
 // import sendRequest from "./request/sendRequest.js";
 // import CreateCardModal from './visit/CreateVisit.js';
 
 // import{doctor, field} from './modyles/index.js';
+=======
+import AutorizationModal from "./Autorization.js";
+import CreateCardModal from "./form/formCreate.js";
+const btnAunt = document.querySelector(".btn-auntification");
+const btnCardCreate = document.querySelector(".btn__create-card");
+>>>>>>> 086cf7fd4e51091ba20da5579b7134e229a14e88
 
+const modalAuto = new AutorizationModal(".modal-authorization");
 
+<<<<<<< HEAD
 
 
 // const btnAuth = document.querySelector('.btn-auth');
@@ -190,3 +199,16 @@
       }
       
       cardsCheck();   
+=======
+btnAunt.addEventListener("click", () => {
+  modalAuto.showModalAuto();
+});
+
+btnCardCreate.addEventListener("click", () => {
+  const modalCreateCard = new CreateCardModal(
+    modalAuto.getToken(),
+    ".modal-create-card"
+  );
+  modalCreateCard.showModalCreateCard();
+});
+>>>>>>> 086cf7fd4e51091ba20da5579b7134e229a14e88
