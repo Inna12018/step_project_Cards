@@ -1,5 +1,5 @@
 class Select {
-    addDropdown(parent, args, dropName, id) {
+    addDropdown(parent, args, dropName, id, value) {
         let dropdown = document.createElement('div');
         let dropdownOpen = document.createElement('button');
         let dropdownList = document.createElement('ul');
@@ -24,6 +24,10 @@ class Select {
 
             dropdownItem.addEventListener('click', () => dropdownOpen.textContent = dropdownItem.textContent);
         });
+
+        if (value) {
+            dropdownOpen.textContent = value;
+        }
 
         dropdown.append(dropdownOpen, dropdownList);
         parent.prepend(dropdown);

@@ -1,5 +1,5 @@
 class Input {
-    addInput(parent, placeholder, descValue, password = false, id ) {
+    addInput(parent, placeholder, descValue, password = false, id, value ) {
         let wrapper = document.createElement('div');
         let description = document.createElement('span');
         let input = document.createElement('input');
@@ -22,6 +22,10 @@ class Input {
         wrapper.className = 'modal-content-wrapper';
         description.className = 'modal-item-desc';
         description.textContent = descValue;
+
+        if (value) {
+            input.value = value;
+        }
 
         wrapper.prepend(description, input);
         parent.append(wrapper);

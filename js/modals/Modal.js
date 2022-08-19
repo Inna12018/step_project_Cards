@@ -75,23 +75,23 @@ class Modal {
         this.addField(header, 'h3', value, 'modal-title');
     }
 
-    addInput(placeholder, descValue, password, id) {
+    addInput(placeholder, descValue, password, id, value) {
         let form = document.querySelector('.modal-form');
 
         let l = new Input();
-        l.addInput(form, placeholder, descValue, password, id);
+        l.addInput(form, placeholder, descValue, password, id, value);
     }
 
-    addDropdown(args, dropName, id) {
+    addDropdown(args, dropName, id, value) {
         let select = new Select();
         let parent = document.querySelector('.modal-form');
-        select.addDropdown(parent, args, dropName, id);
+        select.addDropdown(parent, args, dropName, id, value);
     }
 
-    addTextarea(classes, placeholder, id, descValue) {
+    addTextarea(classes, placeholder, id, descValue, value) {
         let form = document.querySelector('.modal-form');
         let t = new Textarea();
-        t.addTextarea(form, classes, placeholder, id, descValue);
+        t.addTextarea(form, classes, placeholder, id, descValue, value);
     }
 }
 

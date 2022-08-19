@@ -99,37 +99,40 @@ class Visit {
                 let changeInfo = new Modal();
                 changeInfo.show("Зберегти", "saveCard");
                 changeInfo.addTitle("Редагувати");
+                // for (let key in item) {
+                //   const value = item[key];
                 for (const [key, value] of Object.entries(item)) {
+
                     switch (key) {
                         case "status":
-                            changeInfo.addDropdown(['відкритий', 'завершено'], "статус візиту", "status");
+                            changeInfo.addDropdown(['відкритий', 'завершено'], "статус візиту", "status", value);
                             break;
                         case "urgency":
-                            changeInfo.addDropdown(['звичайна', 'пріоритетна', 'невідкладна'], 'терміновість візиту', "urgency");
+                            changeInfo.addDropdown(['звичайна', 'пріоритетна', 'невідкладна'], 'терміновість візиту', "urgency", value);
                             break;
                         case "fullName":
-                            changeInfo.addInput('Прізвище, Ім\'я, По батькові', 'Прізвище,  Ім\'я, По батькові', false, "fullName");
+                            changeInfo.addInput('Прізвище, Ім\'я, По батькові', 'Прізвище,  Ім\'я, По батькові', false, "fullName", value);
                             break;
                         case "motive":
-                            changeInfo.addTextarea("modal-area form-control", "мета візиту", "motive");
+                            changeInfo.addTextarea("modal-area form-control", "мета візиту", "motive", "", value);
                             break;
                         case "description":
-                            changeInfo.addTextarea("modal-area form-control", "опис візиту", "description");
+                            changeInfo.addTextarea("modal-area form-control", "опис візиту", "description", "", value);
                             break;
                         case "mass":
-                            changeInfo.addInput('кг/м2', 'індекс маси тіла', false, "mass");
+                            changeInfo.addInput('кг/м2', 'індекс маси тіла', false, "mass", value);
                             break;
                         case "pressure":
-                            changeInfo.addInput('мм рт. ст.', 'артеріальний тиск', false, "pressure");
+                            changeInfo.addInput('мм рт. ст.', 'артеріальний тиск', false, "pressure" ,value);
                             break;
                         case "age":
-                            changeInfo.addInput('повних років', 'вік', false, "age");
+                            changeInfo.addInput('повних років', 'вік', false, "age", value);
                             break;
                         case "illness":
-                            changeInfo.addTextarea('modal-area form-control', "перенесені захворювання серцево-судинної системи", "illness");
+                            changeInfo.addTextarea('modal-area form-control', "перенесені захворювання серцево-судинної системи", "illness" , "", value);
                             break;
                         case "date":
-                            changeInfo.addInput('дд-мм-гггг', 'дата останнього відвідування', false, "date");
+                            changeInfo.addInput('дд-мм-гггг', 'дата останнього відвідування', false, "date" ,value);
                             break;
                     }
                 }
@@ -156,9 +159,11 @@ class Visit {
                         }
                     });
                     document.getElementById(`${newData.id}`).remove();
-                    API.editCard(newData);
-                    changeInfo.remove();
-                    location.reload();
+                    API.editCard(newData).then(e => {
+                        changeInfo.remove();
+                        location.reload();
+                    });
+
                 });
             });
 
@@ -208,7 +213,8 @@ class Visit {
     search(array, value) {
         if (value) {
             const newArray = array.filter(item => {
-                if (item.doctor.toLowerCase().indexOf(value.toLowerCase()) >= 0 || item.motive.toLowerCase().indexOf(value.toLowerCase()) >= 0) {
+                console.log(item)
+                if (item.doctor.toLowerCase().includes(value.toLowerCase())|| item.motive.toLowerCase().includes(value.toLowerCase())|| item.fullName.toLowerCase().includes(value.toLowerCase())) {
                     return item;
                 }
             });

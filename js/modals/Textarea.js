@@ -1,5 +1,5 @@
 class Textarea {
-    addTextarea(parent, classes, placeholder, id, descValue) {
+    addTextarea(parent, classes, placeholder, id, descValue, value) {
         let wrapper = document.createElement('div');
         let area = document.createElement('textarea');
         let description = document.createElement('span');
@@ -13,6 +13,10 @@ class Textarea {
 
         if (id) {
             area.id = id;
+        }
+
+        if (value) {
+            area.value = value;
         }
 
         if (descValue) {

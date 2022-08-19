@@ -16,9 +16,9 @@ general.transformCards().then((cards) => {
   };
 });
 
-const searchForm = document.querySelector("#submitSearch");
-searchForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+const searchForm = document.querySelector("#search");
+searchForm.addEventListener("click", (e) => {
+  // e.preventDefault();
   const status = document.querySelector(".chooseStatus");
   const urgency = document.querySelector(".chooseUrgency");
   API.getCards().then((data) => {

@@ -61,7 +61,8 @@ const editCard = (cardObj) => {
         method: "PUT",
         body: JSON.stringify(cardObj),
         headers: header(token),
-    }).then(response => response.json());
+    }).then(response => response.json())
+      .catch(e => console.error(e));
 };
 
 export default {
