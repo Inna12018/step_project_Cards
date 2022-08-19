@@ -3,17 +3,17 @@ import {Visit, Modal} from "./index.js";
 class VisitCardiologist extends Visit {
     constructor() {
         super();
-        this.doctor = "Кардиолог";
+        this.doctor = "Кардіолог";
     }
 
     createModal() {
         super.createModal();
         localStorage.removeItem("chosenDoctor");
-        this.modal.addTitle("Кардиолог");
-        this.modal.addInput('кг/м2', 'индекс массы тела', false, "mass");
-        this.modal.addInput('мм рт. ст.', 'артериальное давление', false, "pressure");
-        this.modal.addInput('полных лет', 'возраст', false, "age");
-        this.modal.addTextarea('modal-area form-control', "перенесенные заболевания сердечно-сосудистой системы", "illness");
+        this.modal.addTitle("Кардіолог");
+        this.modal.addInput( 'індекс маси тіла','кг/м2', false, "mass");
+        this.modal.addInput( 'артеріальний тиск','мм рт. ст.', false, "pressure");
+        this.modal.addInput('повних років', 'вік', false, "age");
+        this.modal.addTextarea('modal-area form-control', "перенесені захворювання серцево-судинної системи", "illness");
     }
 
     gatherInfo() {
